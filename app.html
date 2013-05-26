@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Facebook history fetcher</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    
+  </head>
+  
+  <body class="fb-status-unknown">
+
+    <div id="fb-root"></div>
+    <script type="text/javascript" src="script.js"></script>
+    
+    <!-- spinner: active initially, while Facebook API is being loaded -->
+    <div id="fb-api-spinner" class="spinner active">
+      <img src="spinner.gif"/>
+    </div>
+
+    <div class="when-fb-disconnected">
+      <a href="#" onclick="login(); return false">Log into Facebook</a>
+    </div>
+
+    <div class="when-fb-connected">
+      <div id="heading"></div>
+      <div>
+        <a href="#" onclick="FB.logout(function(response) { }); return false;">Log out of Facebook</a>
+      </div>
+      <div>
+        <a href="#" onclick="getPosts(); return false;">Get my Facebook history</a>
+      </div>
+      
+      <!-- spinner: active while post data is being loaded -->
+      <div id="posts-spinner" class="spinner inactive">
+        <img src="spinner.gif"/>
+      </div>
+      
+      <!-- destination for the feed results -->
+      <div id="posts"></div>
+    </div>
+
+  </body>
+</html>

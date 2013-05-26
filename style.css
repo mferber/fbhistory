@@ -1,0 +1,193 @@
+/*
+ * Overall document
+ */
+
+body {
+  font-family: Helvetica;
+  font-size: 10pt;
+}
+
+
+/*
+ * Spinners: display while running asynchronous tasks.
+ * Set class to "spinner active" to activate, "spinner inactive" to
+ * deactivate
+ */
+
+.spinner.active {
+  display: block;
+  width: 100%;
+  margin: 20px;
+  text-align: center;
+}
+
+.spinner.inactive {
+  display: none;
+}
+
+
+/* Display toggle is based on Facebook connection status; change class on
+ * body when login status changes, to toggle visibility */
+body.fb-status-unknown .when-fb-connected,
+body.fb-status-unknown .when-fb-disconnected {
+  display: none;
+}
+
+body.fb-connected .when-fb-connected {
+  display: block;
+}
+
+body.fb-connected .when-fb-disconnected {
+  display: none;
+}
+
+body.fb-disconnected .when-fb-disconnected {
+  display: block;
+}
+
+body.fb-disconnected .when-fb-connected {
+  display: none;
+}
+
+
+/*
+ * Spinners: display while running asynchronous tasks
+ */
+
+.spinner.active {
+  display: block;
+  width: 100%;
+  margin: 20px;
+  text-align: center;
+}
+
+.spinner.inactive {
+  display: none;
+}
+
+
+/*
+ * User identification header
+ */
+ 
+body.fb-connected #heading {
+  border: 1px solid #333;
+  background-color: #ddd;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+
+/*
+ * Posts
+ */
+ 
+body.fb-connected #posts {
+  /* width: 800px; */
+}
+
+body.fb-connected #posts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-indent: 0;
+}
+
+body.fb-connected #posts li {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid green; */
+  overflow: hidden;  /* auto-clear contained floats */
+}
+
+body.fb-connected #posts .item {
+  clear: both;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* user's avatar icon div and img */
+
+body.fb-connected #posts .item .icon {
+  float: left;
+}
+
+body.fb-connected #posts img.user-profile-icon {
+  width: 45px;
+}
+
+body.fb-connected #posts .item-info {
+  margin-left: 55px;
+}
+
+body.fb-connected #posts .message {
+  margin-bottom: 10px;
+}
+
+body.fb-connected #posts .details {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 30px;
+  overflow: hidden;  /* auto-clear contained floats */
+}
+
+body.fb-connected #posts .details:not(.photo) {
+  padding: 5px;
+  border: 1px dotted #888;
+  background-color: #eee;
+}
+
+body.fb-connected #posts .details.photo {
+  padding: 0;
+}
+
+body.fb-connected #posts .details .thumbnail {
+  float: left;
+  margin-right: 100px;
+  width: 1%;
+}
+
+body.fb-connected #posts .details .details-text {
+  float: right;
+  width: 100%;
+}
+
+body.fb-connected #posts .details .anchor {
+  border-top: 1px solid #ccc;
+  margin-top: 3px;
+  padding-top: 3px;
+}
+
+body.fb-connected #posts .details .anchor a {
+  text-decoration: none;
+  font-size: 8pt;
+  color: #888;
+}
+
+body.fb-connected #posts .details .video-name,
+body.fb-connected #posts .details .link-name {
+  font-weight: bold;
+}
+
+body.fb-connected #posts .details .video-desc,
+body.fb-connected #posts .details .link-desc {
+  font-size: 8pt;
+}
+  
+body.fb-connected #posts .timestamp {
+  font-size: 8pt;
+  margin-top: 5px;
+}
+
+/* annotations: timestamp, likes, comments */
+body.fb-connected #posts .annotations {
+  font-size: 8pt;
+  color: #888;
+}
+
+.item, .user-profile-icon, .item-info, .details, .thumbnail, .details-text, .video-name, .video-desc, .link-name, .link-desc, .anchor, .annotations, .likes, .comments, .timestamp {
+    /* padding: 1px; margin: 3px; border: 1px dotted red; */
+}
